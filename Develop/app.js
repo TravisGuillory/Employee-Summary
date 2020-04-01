@@ -102,6 +102,8 @@ const init = async () => {
     }
 }
 
+// functions to add the role specific question and push the new employee to the employees array
+
 const manager = async(data) =>{
     const managerData = await inquirer.prompt(managerQuestion);
     const elem = new Manager(data.name, data.id, data.email, managerData.officeNumber);
@@ -130,6 +132,19 @@ const intern = async(data) => {
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+
+const exit = (team) =>{
+    fs.writeFile("./output/team.html", render(team), function(err){
+        if (err) {
+            throw err;
+        }
+        console.log("Created a team, team.html is cresated");
+    })
+}
+
+
+
+
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
