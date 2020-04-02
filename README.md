@@ -8,7 +8,7 @@ This node.js ion is built using test driven develpment and jest and ES6 classes.
 
 Run npm install to generate the needed dependencies.
 
-[Team Profile gif](Assets/teamProfile.gif)
+![Team Profile gif](Assets/teamProfile.gif)
 
 
 
